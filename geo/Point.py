@@ -1,6 +1,9 @@
 class Point:
     """
     A Point on a map
+
+    @ivar x: Longitude point
+    @ivar y: Latitude point
     """
     def __init__(self, x, y):
         """

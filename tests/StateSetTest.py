@@ -1,7 +1,7 @@
 import unittest
 
-from utils.Point import Point
-from utils.StateSet import StateSet
+from geo.Point import Point
+from geo.StateSet import StateSet
 
 
 class StateSetTest(unittest.TestCase):
@@ -10,7 +10,7 @@ class StateSetTest(unittest.TestCase):
     """
     def setUp(self):
         """
-        Creates a four state grid of pentagonal states for verifiying potential and actual states
+        Creates a four state grid of pentagonal states for verifiying potential and actual states patches
         """
         with open('state_set_test.json') as states_file:
             self.state_set = StateSet(states_file)
@@ -76,7 +76,7 @@ class StateSetTest(unittest.TestCase):
 
     def test_point_not_contained(self):
         """
-        Tests that points outside of quandrants do not return a false containment match
+        Tests that points outside of quandrants do not return a false positive containment match
         """
         state = self.state_set.get_containing_state(Point(-25.55, 120))
         self.assertIsNone(state, "False positive contained match when too far north")

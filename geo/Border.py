@@ -37,7 +37,7 @@ class Border:
         """
         Find the x intercept of the border line
 
-        @return: The x intercept of a non-horizontal line or 0 for a horizontal line
+        @return: The x intercept of a non-horizontal line or Not a Number for a horizontal line
         """
         if self.slope == float('Inf'):
             return self.start_point.x

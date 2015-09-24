@@ -1,7 +1,7 @@
 import unittest
 
-from utils.Point import Point
-from utils.State import State
+from geo.Point import Point
+from geo.State import State
 
 
 class StateTest(unittest.TestCase):
@@ -15,6 +15,9 @@ class StateTest(unittest.TestCase):
         self.border_points = [[-142.67, 77.34], [-10.323, 95.55], [10.67, 85.56],
                               [44.22, 76.88], [-20.99, 55.59], [-142.67, 77.34]]
         self.test_state = State("Test State", self.border_points)
+
+        self.border_points = [[30, 30], [45, 15], [15, 15], [30, 30]]
+        self.triangle_state = State("Triangle Test State", self.border_points)
 
     def test_border_extremes(self):
         """
@@ -42,3 +45,24 @@ class StateTest(unittest.TestCase):
         Tests that a point inside of the state is registered as such
         """
         self.assertTrue(self.test_state.contains_point(Point(5, 88)), "Point incorrectly considered out of state")
+
+    def test_vertex_point(self):
+        """
+        Tests that a point on the vertex of a border point is not within a state
+        """
+        self.assertFalse(self.test_state.contains_point(Point(-20.99, 55.59)), "Point on vertex considered in state")
+
+    def test_horizontal_point(self):
+        """
+        Tests that a point on a horizontal border is not within a state
+        """
+        self.assertFalse(self.triangle_state.contains_point(Point(30, 15)),
+                         "Point on horizontal border considered in state")
+
+    def test_border_point(self):
+        """
+        Tests that a point on a border is not within a state
+        """
+        self.assertFalse(self.triangle_state.contains_point(Point(25, 15)),
+                         "Point on non-horizontal border considered in state")
+

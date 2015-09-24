@@ -1,8 +1,8 @@
 import math
 import unittest
 
-from utils.Border import Border
-from utils.Point import Point
+from geo.Border import Border
+from geo.Point import Point
 
 
 class BorderTest(unittest.TestCase):
@@ -38,7 +38,7 @@ class BorderTest(unittest.TestCase):
 
     def test_y_intercept_regular(self):
         """
-        Tests computing y-intercept of a non vertical and non horizontal line
+        Tests computing x-intercept of a non vertical and non horizontal line
         """
         start = Point(-79.2, 40)
         end = Point(-86.2, 33)
@@ -47,18 +47,18 @@ class BorderTest(unittest.TestCase):
 
     def test_y_intercept_horizontal(self):
         """
-        Tests computing y-intercept of a horizontal line
+        Tests computing x-intercept of a horizontal line
         """
         start = Point(-79.2, 40)
         end = Point(-86.2, 40)
         border = Border(start, end)
-        self.assertTrue(math.isnan(border._get_x_intercept()), "Horizontal y-intercept calculation not working")
+        self.assertTrue(math.isnan(border._get_x_intercept()), "Horizontal x-intercept calculation not working")
 
     def test_y_intercept_vertical(self):
         """
-        Tests computing y-intercept of a vertical line
+        Tests computing x-intercept of a vertical line
         """
         start = Point(-79.2, 40)
         end = Point(-79.2, 33)
         border = Border(start, end)
-        self.assertEqual(-79.2, border._get_x_intercept(), "Vertical y-intercept calculation not working")
+        self.assertEqual(-79.2, border._get_x_intercept(), "Vertical x-intercept calculation not working")

@@ -56,8 +56,7 @@ class StateSet:
         @param point: A point to check against for potential state matches
         @return: The state that contains the point specified or None
         """
-        contain_state = None
         for state in self._get_potential_states(point):
             if state.contains_point(point):
-                contain_state = state
-        return contain_state
+                return state
+        return None

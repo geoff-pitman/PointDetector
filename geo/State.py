@@ -63,27 +63,39 @@ class State:
         exists on the real border. It increments if the intersection is west or east of the border.  An odd number on
         both sides means that the point is inside of the state, otherwise it is not.
 
+        There are also checks to make sure that the point is not on a border/vertex itself
+
         @param point: Point to check
-        @return: True if the point is in the state, False otherwise
+        @return: True if the point is inside of the state, False otherwise
         """
         west_intersects = 0
         east_intersects = 0
         for border in self.borders:
             border_start_lat = border.start_point.y
+            border_start_lng = border.start_point.x
             border_end_lat = border.end_point.y
-            if math.isnan(border.slope):
-                border_intersect = point.y
-            elif math.isinf(border.slope):
+            border_end_lng = border.end_point.x
+            if border.slope == 0:
                 border_intersect = None
+            elif math.isinf(border.slope):
+                border_intersect = point.y
             else:
                 border_intersect = (point.y - border.x_intercept)/border.slope
             if border_intersect is not None and \
                     ((border_start_lat >= border_end_lat and border_start_lat >= point.y >= border_end_lat) or
                      (border_end_lat >= border_start_lat and border_end_lat >= point.y >= border_start_lat)):
-                if border_intersect > point.x:
+                # point is on border so cannot be in a specific state, weird math to account for float point rounding
+                if .000000005 >= (abs(border_intersect) - abs(point.x)) >= -.000000005:
+                    return False
+                elif border_intersect > point.x:
                     east_intersects += 1
                 elif border_intersect < point.x:
                     west_intersects += 1
+            # point is on horizontal border so cannot be in a specific state
+            elif border_intersect is None and border_start_lat == point.y and \
+                ((border_start_lng >= border_end_lng and border_start_lng >= point.x >= border_end_lng) or
+                 (border_end_lng >= border_start_lng and border_end_lng >= point.x >= border_start_lng)):
+                return False
         if (west_intersects % 2 == 1) and (east_intersects % 2 == 1):
             return True
         else:
