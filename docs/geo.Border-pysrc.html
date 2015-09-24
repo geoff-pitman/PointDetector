@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>utils.Border</title>
+  <title>geo.Border</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -34,7 +34,7 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        <a href="utils-module.html">Package&nbsp;utils</a> ::
+        <a href="geo-module.html">Package&nbsp;geo</a> ::
         Module&nbsp;Border
       </span>
     </td>
@@ -45,15 +45,15 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="utils.Border-pysrc.html"
+            >]&nbsp;|&nbsp;<a href="geo.Border-pysrc.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
-<h1 class="epydoc">Source Code for <a href="utils.Border-module.html">Module utils.Border</a></h1>
+<h1 class="epydoc">Source Code for <a href="geo.Border-module.html">Module geo.Border</a></h1>
 <pre class="py-src">
-<a name="Border"></a><div id="Border-def"><a name="L1"></a><tt class="py-lineno"> 1</tt> <a class="py-toggle" href="#" id="Border-toggle" onclick="return toggle('Border');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="utils.Border.Border-class.html">Border</a><tt class="py-op">:</tt> </tt>
+<a name="Border"></a><div id="Border-def"><a name="L1"></a><tt class="py-lineno"> 1</tt> <a class="py-toggle" href="#" id="Border-toggle" onclick="return toggle('Border');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="geo.Border.Border-class.html">Border</a><tt class="py-op">:</tt> </tt>
 </div><div id="Border-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Border-expanded"><a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
 <a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">    A border of a State</tt> </tt>
 <a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
@@ -65,7 +65,7 @@
 <a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">    @ivar slope: Slope of the border line</tt> </tt>
 <a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">    @ivar x_intercept: extrapolated x intercept of the border line</tt> </tt>
 <a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
-<a name="Border.__init__"></a><div id="Border.__init__-def"><a name="L13"></a><tt class="py-lineno">13</tt> <a class="py-toggle" href="#" id="Border.__init__-toggle" onclick="return toggle('Border.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="utils.Border.Border-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">start_point</tt><tt class="py-op">,</tt> <tt class="py-param">end_point</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="Border.__init__"></a><div id="Border.__init__-def"><a name="L13"></a><tt class="py-lineno">13</tt> <a class="py-toggle" href="#" id="Border.__init__-toggle" onclick="return toggle('Border.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="geo.Border.Border-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">start_point</tt><tt class="py-op">,</tt> <tt class="py-param">end_point</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Border.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Border.__init__-expanded"><a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
 <a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">        Initializes a border</tt> </tt>
 <a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
@@ -74,10 +74,10 @@
 <a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
 <a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start_point</tt> <tt class="py-op">=</tt> <tt class="py-name">start_point</tt> </tt>
 <a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end_point</tt> <tt class="py-op">=</tt> <tt class="py-name">end_point</tt> </tt>
-<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">slope</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Method utils.Border.Border._get_slope()=utils.Border.Border-class.html#_get_slope"><a title="utils.Border.Border._get_slope" class="py-name" href="#" onclick="return doclink('link-0', '_get_slope', 'link-0');">_get_slope</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">x_intercept</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method utils.Border.Border._get_x_intercept()=utils.Border.Border-class.html#_get_x_intercept"><a title="utils.Border.Border._get_x_intercept" class="py-name" href="#" onclick="return doclink('link-1', '_get_x_intercept', 'link-1');">_get_x_intercept</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">slope</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Method geo.Border.Border._get_slope()=geo.Border.Border-class.html#_get_slope"><a title="geo.Border.Border._get_slope" class="py-name" href="#" onclick="return doclink('link-0', '_get_slope', 'link-0');">_get_slope</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">x_intercept</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method geo.Border.Border._get_x_intercept()=geo.Border.Border-class.html#_get_x_intercept"><a title="geo.Border.Border._get_x_intercept" class="py-name" href="#" onclick="return doclink('link-1', '_get_x_intercept', 'link-1');">_get_x_intercept</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
-<a name="Border._get_slope"></a><div id="Border._get_slope-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="Border._get_slope-toggle" onclick="return toggle('Border._get_slope');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="utils.Border.Border-class.html#_get_slope">_get_slope</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="Border._get_slope"></a><div id="Border._get_slope-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="Border._get_slope-toggle" onclick="return toggle('Border._get_slope');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="geo.Border.Border-class.html#_get_slope">_get_slope</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Border._get_slope-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Border._get_slope-expanded"><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
 <a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-docstring">        Find the slope of the border line</tt> </tt>
 <a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
@@ -88,11 +88,11 @@
 <a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
 <a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end_point</tt><tt class="py-op">.</tt><tt class="py-name">y</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start_point</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end_point</tt><tt class="py-op">.</tt><tt class="py-name">x</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start_point</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
-<a name="Border._get_x_intercept"></a><div id="Border._get_x_intercept-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="Border._get_x_intercept-toggle" onclick="return toggle('Border._get_x_intercept');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="utils.Border.Border-class.html#_get_x_intercept">_get_x_intercept</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="Border._get_x_intercept"></a><div id="Border._get_x_intercept-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="Border._get_x_intercept-toggle" onclick="return toggle('Border._get_x_intercept');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="geo.Border.Border-class.html#_get_x_intercept">_get_x_intercept</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Border._get_x_intercept-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Border._get_x_intercept-expanded"><a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
 <a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"><tt class="py-docstring">        Find the x intercept of the border line</tt> </tt>
 <a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
-<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-docstring">        @return: The x intercept of a non-horizontal line or 0 for a horizontal line</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-docstring">        @return: The x intercept of a non-horizontal line or Not a Number for a horizontal line</tt> </tt>
 <a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
 <a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">slope</tt> <tt class="py-op">==</tt> <tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-string">'Inf'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start_point</tt><tt class="py-op">.</tt><tt class="py-name">x</tt> </tt>
@@ -130,7 +130,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Sep 24 04:15:47 2015
+    Generated by Epydoc 3.0.1 on Thu Sep 24 10:03:45 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

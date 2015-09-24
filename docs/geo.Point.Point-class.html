@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>utils.StateSet</title>
+  <title>geo.Point.Point</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -34,8 +34,9 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        <a href="utils-module.html">Package&nbsp;utils</a> ::
-        Module&nbsp;StateSet
+        <a href="geo-module.html">Package&nbsp;geo</a> ::
+        <a href="geo.Point-module.html">Module&nbsp;Point</a> ::
+        Class&nbsp;Point
       </span>
     </td>
     <td>
@@ -45,25 +46,27 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="utils.StateSet-module.html"
+            >]&nbsp;|&nbsp;<a href="geo.Point.Point-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
-<!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module StateSet</h1><p class="nomargin-top"><span class="codelink"><a href="utils.StateSet-pysrc.html">source&nbsp;code</a></span></p>
-<!-- ==================== CLASSES ==================== -->
-<a name="section-Classes"></a>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Point</h1><p class="nomargin-top"><span class="codelink"><a href="geo.Point-pysrc.html#Point">source&nbsp;code</a></span></p>
+<p>A Point on a map</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="left"><span class="table-header">Instance Methods</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Classes"
+         ><span class="options">[<a href="#section-InstanceMethods"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
@@ -74,22 +77,33 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="utils.StateSet.StateSet-class.html" class="summary-name">StateSet</a><br />
-      A collection of all states
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="geo.Point.Point-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Initializes a point</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="geo.Point-pysrc.html#Point.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 </table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="left"><span class="table-header">Instance Variables</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
+         ><span class="options">[<a href="#section-InstanceVariables"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
@@ -100,10 +114,65 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'utils'"><code class="variable-quote">'</code><code class="variable-string">utils</code><code class="variable-quote">'</code></code>
+        <a name="x"></a><span class="summary-name">x</span><br />
+      Longitude point
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="y"></a><span class="summary-name">y</span><br />
+      Latitude point
     </td>
   </tr>
 </table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="geo.Point-pysrc.html#Point.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initializes a point</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> - The x coordinate of the point</li>
+        <li><strong class="pname"><code>y</code></strong> - The y coordinate of the point</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -127,7 +196,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Sep 24 04:15:47 2015
+    Generated by Epydoc 3.0.1 on Thu Sep 24 10:03:45 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

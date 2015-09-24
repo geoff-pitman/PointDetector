@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>utils.StateSet.StateSet</title>
+  <title>geo.State.State</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -34,9 +34,9 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        <a href="utils-module.html">Package&nbsp;utils</a> ::
-        <a href="utils.StateSet-module.html">Module&nbsp;StateSet</a> ::
-        Class&nbsp;StateSet
+        <a href="geo-module.html">Package&nbsp;geo</a> ::
+        <a href="geo.State-module.html">Module&nbsp;State</a> ::
+        Class&nbsp;State
       </span>
     </td>
     <td>
@@ -46,15 +46,15 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="utils.StateSet.StateSet-class.html"
+            >]&nbsp;|&nbsp;<a href="geo.State.State-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class StateSet</h1><p class="nomargin-top"><span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet">source&nbsp;code</a></span></p>
-<p>A collection of all states</p>
+<h1 class="epydoc">Class State</h1><p class="nomargin-top"><span class="codelink"><a href="geo.State-pysrc.html#State">source&nbsp;code</a></span></p>
+<p>A state's geographical mapping</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -79,11 +79,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="utils.StateSet.StateSet-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">state_file</span>)</span><br />
-      Sets up the states that belong to the set</td>
+          <td><span class="summary-sig"><a href="geo.State.State-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">points</span>)</span><br />
+      Sets up the basic data to define a State</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="geo.State-pysrc.html#State.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -97,11 +98,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="utils.StateSet.StateSet-class.html#_get_potential_states" class="summary-sig-name" onclick="show_private();">_get_potential_states</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">point</span>)</span><br />
-      Finds which states may contain the point specified</td>
+          <td><span class="summary-sig"><a href="geo.State.State-class.html#_resolve_borders_and_extremes" class="summary-sig-name" onclick="show_private();">_resolve_borders_and_extremes</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">points</span>)</span><br />
+      Sets up the borders for a state and all of the compass direction 
+      extremes</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet._get_potential_states">source&nbsp;code</a></span>
+            <span class="codelink"><a href="geo.State-pysrc.html#State._resolve_borders_and_extremes">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -115,48 +117,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="utils.StateSet.StateSet-class.html#get_containing_state" class="summary-sig-name">get_containing_state</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="geo.State.State-class.html#contains_point" class="summary-sig-name">contains_point</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">point</span>)</span><br />
-      Check all potential state matches to see if any contain the supplied 
-      point</td>
+      Checks if a point is inside or outside of the state using a take on a
+      ray tracing algorithm</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet.get_containing_state">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-</table>
-<!-- ==================== STATIC METHODS ==================== -->
-<a name="section-StaticMethods"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Static Methods</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-StaticMethods"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="utils.StateSet.StateSet-class.html#_create_states" class="summary-sig-name" onclick="show_private();">_create_states</a>(<span class="summary-sig-arg">state_file</span>)</span><br />
-      Reads each row from the state json file and casts each one to its own
-      state</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet._create_states">source&nbsp;code</a></span>
+            <span class="codelink"><a href="geo.State-pysrc.html#State.contains_point">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -186,8 +152,48 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="states"></a><span class="summary-name">states</span><br />
-      a list of all states in the dataset
+        <a name="borders"></a><span class="summary-name">borders</span><br />
+      list of state borders
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="eastmost"></a><span class="summary-name">eastmost</span><br />
+      furthest east longitude of the state
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="name"></a><span class="summary-name">name</span><br />
+      State name
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="northmost"></a><span class="summary-name">northmost</span><br />
+      furthest north longitude of the state
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="southmost"></a><span class="summary-name">southmost</span><br />
+      furthest west longitude of the state
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="westmost"></a><span class="summary-name">westmost</span><br />
+      furthest west longitude of the state
     </td>
   </tr>
 </table>
@@ -217,105 +223,84 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">state_file</span>)</span>
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">points</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="geo.State-pysrc.html#State.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Sets up the states that belong to the set</p>
+  <p>Sets up the basic data to define a State</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>state_file</code></strong> - a file of Json rows which each define a state</li>
+        <li><strong class="pname"><code>name</code></strong> - Name of the state</li>
+        <li><strong class="pname"><code>points</code></strong> - Points that compose the border</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="_create_states"></a>
+<a name="_resolve_borders_and_extremes"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_create_states</span>(<span class="sig-arg">state_file</span>)</span>
-    <br /><em class="fname">Static Method</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_resolve_borders_and_extremes</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">points</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet._create_states">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="geo.State-pysrc.html#State._resolve_borders_and_extremes">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Reads each row from the state json file and casts each one to its own 
-  state</p>
+  <p>Sets up the borders for a state and all of the compass direction 
+  extremes</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>state_file</code></strong> - a file of Json rows which each define a state</li>
+        <li><strong class="pname"><code>points</code></strong> - All points that comprise the state</li>
     </ul></dd>
     <dt>Returns:</dt>
-        <dd>a list of state representation for each row in the file</dd>
+        <dd>A list of all border lines that outline the state</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="_get_potential_states"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_potential_states</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">point</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet._get_potential_states">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Finds which states may contain the point specified</p>
-  <p>This uses the maximum points of a state in thefour cardinal directions
-  to approximate a state as a square. This means the point can be easily 
-  checked against four data points instead of checking all borders of a 
-  state. There is an extra initial cost at startup time, but I feel this is
-  outweighed by the performance gain when handling requests.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>point</code></strong> - A point to check against for potential state matches</li>
-    </ul></dd>
-    <dt>Returns:</dt>
-        <dd>A list of states the point may exist within</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_containing_state"></a>
+<a name="contains_point"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_containing_state</span>(<span class="sig-arg">self</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">contains_point</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">point</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="utils.StateSet-pysrc.html#StateSet.get_containing_state">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="geo.State-pysrc.html#State.contains_point">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Check all potential state matches to see if any contain the supplied 
-  point</p>
+  <p>Checks if a point is inside or outside of the state using a take on a 
+  ray tracing algorithm</p>
+  <p>Does this by checking every border and seeing where a horizontal ray 
+  would intersect the border if the border was a full blown line instead of
+  a line segment. It then verifies if the intersection point actually 
+  exists on the real border. It increments if the intersection is west or 
+  east of the border.  An odd number on both sides means that the point is 
+  inside of the state, otherwise it is not.</p>
+  <p>There are also checks to make sure that the point is not on the border
+  itself</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>point</code></strong> - A point to check against for potential state matches</li>
+        <li><strong class="pname"><code>point</code></strong> - Point to check</li>
     </ul></dd>
     <dt>Returns:</dt>
-        <dd>The state that contains the point specified or None</dd>
+        <dd>True if the point is in the state, False otherwise</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -343,7 +328,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Sep 24 04:15:47 2015
+    Generated by Epydoc 3.0.1 on Thu Sep 24 10:03:45 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
