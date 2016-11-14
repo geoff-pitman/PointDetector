@@ -11,7 +11,7 @@ class State:
     @ivar westmost: furthest west longitude of the state
     @ivar eastmost: furthest east longitude of the state
     @ivar northmost: furthest north longitude of the state
-    @ivar southmost: furthest west longitude of the state
+    @ivar southmost: furthest south longitude of the state
     @ivar name: State name
     @ivar borders: list of state borders
     """
